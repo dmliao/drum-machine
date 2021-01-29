@@ -1,0 +1,11 @@
+Model Information:
+* title:	DRUMS STUDIO 2020 FBX
+* source:	https://sketchfab.com/3d-models/drums-studio-2020-fbx-c4ed2f3c9e474f208fb6a8cd4d0f7add
+* author:	Jan Vancik (https://sketchfab.com/theotheory77)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "DRUMS STUDIO 2020 FBX" (https://sketchfab.com/3d-models/drums-studio-2020-fbx-c4ed2f3c9e474f208fb6a8cd4d0f7add) by Jan Vancik (https://sketchfab.com/theotheory77) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
