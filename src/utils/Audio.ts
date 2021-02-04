@@ -23,6 +23,8 @@ export class AudioHandler {
         this.loadSound(DRUM_ID.HI_TOM, '/assets/sfx/hi_tom.mp3')
         this.loadSound(DRUM_ID.LOW_TOM, '/assets/sfx/low_tom.mp3')
         this.loadSound(DRUM_ID.FLOOR_TOM, '/assets/sfx/floor_tom.mp3')
+        this.loadSound(DRUM_ID.RIDE, '/assets/sfx/ride.mp3')
+        this.loadSound(DRUM_ID.CRASH, '/assets/sfx/crash.mp3')
     }
 
     protected loadSound(id: DRUM_ID, assetPath: string) {

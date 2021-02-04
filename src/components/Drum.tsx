@@ -81,6 +81,11 @@ export const Drum = (props) => {
   })
   
   // CRASH CYMBAL - crash_cymbal_body
+  const crashWorldPosition = new Vector3()
+  const crashWorldQuaternion = new Quaternion()
+  const [crashMesh, crashObb]: [Mesh, YUKA.OBB] = useMemo(() => {
+    return getMeshAndObb(model.nodes.crash_cymbal_body, DRUM_ID.CRASH)
+  })
 
   useFrame(() => {
     // this is not performant, but doesn't require manual matrix updates.
@@ -91,6 +96,7 @@ export const Drum = (props) => {
     updateOBBHelper(lowTomWorldPosition, lowTomWorldQuaternion, loTomMesh, loTomOBB)
     updateOBBHelper(floorTomWorldPosition, floorTomWorldQuaternion, floorTomMesh, floorTomOBB)
     updateOBBHelper(rideWorldPosition, rideWorldQuaternion, rideMesh, rideObb)
+    updateOBBHelper(crashWorldPosition, crashWorldQuaternion, crashMesh, crashObb)
   })
 
   return <><group

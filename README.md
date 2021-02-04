@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Drum Machine
+
+WebXR Drum kit made in `THREE.JS`, `react-three-fiber`, and `react-xr`. Uses `create-react-app` for bootstrapping.
+
+## Used Resources
+
+* Sound Effects - https://www.fesliyanstudios.com/sound-effects-policy
+* Drum Kit - based on "DRUMS STUDIO 2020 FBX" (https://sketchfab.com/3d-models/drums-studio-2020-fbx-c4ed2f3c9e474f208fb6a8cd4d0f7add) by Jan Vancik (https://sketchfab.com/theotheory77) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* Drumsticks - https://sketchfab.com/3d-models/lowpoly-drumstick-0cab2eab9d3a45aba4f68f72bfa5ae1e
+
+
+# Create React App Readme
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
