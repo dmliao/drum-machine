@@ -2,6 +2,10 @@
 
 WebXR Drum kit made in `THREE.JS`, `react-three-fiber`, and `react-xr`. Uses `create-react-app` for bootstrapping.
 
+## Current Status
+
+Um...it sort of operates. I've only really tested it on the WebXR emulator, though. There's a lot of spooniness in the code, so read at your own risk!
+
 ## Used Resources
 
 * Sound Effects - https://www.fesliyanstudios.com/sound-effects-policy
