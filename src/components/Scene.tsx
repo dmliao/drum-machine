@@ -12,7 +12,7 @@ function Scene(props: MeshProps) {
     const { setDefaultCamera } = useThree()
     useEffect(() => {
         const sceneCamera = new PerspectiveCamera()
-        sceneCamera.position.set(0, 1.6, 0)
+        sceneCamera.position.set(0, 1.12, 0)
         setDefaultCamera(sceneCamera)
     }, [])
     

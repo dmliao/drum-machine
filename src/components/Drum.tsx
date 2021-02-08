@@ -99,8 +99,19 @@ export const Drum = (props) => {
     updateOBBHelper(crashWorldPosition, crashWorldQuaternion, crashMesh, crashObb)
   })
 
+  /*
+    You can add 
+    
+    <box3Helper
+    box={snareBox} />
+    <box3Helper
+    box={hatBox} />
+
+    to the scene to visualize the AABB bounding boxes. I don't have any helpers to visualize the OBBs, sorry.
+  */
+
   return <><group
-    position={[0,0,-1]}
+    position={[0,0,-0.5]}
     rotation={[0, Math.PI, 0]}
     dispose={null}>
     <primitive 
@@ -108,9 +119,5 @@ export const Drum = (props) => {
      />
 
   </group>
-  <box3Helper
-    box={snareBox} />
-    <box3Helper
-    box={hatBox} />
   </>
 }
