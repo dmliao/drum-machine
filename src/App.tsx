@@ -1,10 +1,7 @@
 import React, { Suspense } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { VRCanvas } from '@react-three/xr';
 import Box from './components/Box';
-import { Canvas, useThree } from 'react-three-fiber';
-import { Drum } from './components/Drum';
 import Scene from './components/Scene';
 
 

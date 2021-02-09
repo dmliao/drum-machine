@@ -1,8 +1,7 @@
-import { useGLTF } from '@react-three/drei'
-import React, { useMemo, useRef, useEffect, useState } from 'react'
-import { MeshProps, useFrame, useLoader, useThree } from 'react-three-fiber'
-import { Box3, BoxBufferGeometry, BufferGeometry, Geometry, Matrix4, Mesh, MeshBasicMaterial, Object3D, Quaternion, Vector3 } from 'three'
-import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import React, { useMemo } from 'react'
+import { useFrame, useLoader } from 'react-three-fiber'
+import { Box3, Mesh, Quaternion, Vector3 } from 'three'
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import * as YUKA from 'yuka'
 import { findMesh, getYUKAPoints } from '../utils';
 import { DRUM_ID } from '../utils/drumIds';
@@ -57,35 +56,35 @@ export const Drum = (props) => {
   const hiTomWorldQuaternion = new Quaternion()
   const [hiTomMesh, hiTomOBB]: [Mesh, YUKA.OBB] = useMemo(() => {
     return getMeshAndObb(model.nodes.hi_tom_body, DRUM_ID.HI_TOM)
-  })
+  }, [model])
 
   // MID TOM - mid_tom_body
   const lowTomWorldPosition = new Vector3()
   const lowTomWorldQuaternion = new Quaternion()
   const [loTomMesh, loTomOBB]: [Mesh, YUKA.OBB] = useMemo(() => {
     return getMeshAndObb(model.nodes.mid_tom_body, DRUM_ID.LOW_TOM)
-  })
+  }, [model])
 
   // FLOOR TOM - floor_tom_body
   const floorTomWorldPosition = new Vector3()
   const floorTomWorldQuaternion = new Quaternion()
   const [floorTomMesh, floorTomOBB]: [Mesh, YUKA.OBB] = useMemo(() => {
     return getMeshAndObb(model.nodes.floor_tom_body, DRUM_ID.FLOOR_TOM)
-  })
+  }, [model])
 
   // RIDE CYMBAL - ride_cymbal_body
   const rideWorldPosition = new Vector3()
   const rideWorldQuaternion = new Quaternion()
   const [rideMesh, rideObb]: [Mesh, YUKA.OBB] = useMemo(() => {
     return getMeshAndObb(model.nodes.ride_cymbal_bod, DRUM_ID.RIDE)
-  })
+  }, [model])
   
   // CRASH CYMBAL - crash_cymbal_body
   const crashWorldPosition = new Vector3()
   const crashWorldQuaternion = new Quaternion()
   const [crashMesh, crashObb]: [Mesh, YUKA.OBB] = useMemo(() => {
     return getMeshAndObb(model.nodes.crash_cymbal_body, DRUM_ID.CRASH)
-  })
+  }, [model])
 
   useFrame(() => {
     // this is not performant, but doesn't require manual matrix updates.
@@ -101,7 +100,7 @@ export const Drum = (props) => {
 
   /*
     You can add 
-    
+
     <box3Helper
     box={snareBox} />
     <box3Helper

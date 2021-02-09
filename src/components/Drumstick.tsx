@@ -1,7 +1,7 @@
 import { XRController } from "@react-three/xr";
-import React, { useEffect, useState, useMemo } from "react";
-import { MeshProps, useFrame, useLoader, useThree } from "react-three-fiber";
-import { PerspectiveCamera, Mesh, Vector3, Object3D } from "three";
+import React, { useState, useMemo } from "react";
+import { MeshProps, useFrame, useLoader } from "react-three-fiber";
+import { Vector3, Object3D } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import * as YUKA from 'yuka'
 import { getYUKAPoints } from "../utils";
@@ -29,7 +29,7 @@ function Drumstick(props: DrumstickProps) {
     // add to registry
     registry.registerDrumstick(obb, props.name)
     return obb
-  }, [drumstickScene])
+  }, [drumstickScene, props.name])
 
   useFrame(() => {
     const drumstick = (drumstickScene as Object3D);

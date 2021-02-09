@@ -1,6 +1,6 @@
-import React, { useRef, useMemo, useState } from "react";
-import { MeshProps, useFrame, useThree } from "react-three-fiber";
-import { AudioListener, Box3, Mesh, Vector3 } from "three";
+import React, { useMemo, useState } from "react";
+import { useFrame, useThree } from "react-three-fiber";
+import { AudioListener, Box3, Vector3 } from "three";
 import { OBB, AABB } from "yuka";
 import { AudioHandler } from "../utils/Audio";
 import { DRUM_ID, STICK_ID } from "../utils/drumIds";
@@ -132,8 +132,8 @@ function getStickCollision(name: STICK_ID): CollisionData | undefined {
 }
 
 function Collisions(props) {
-  const [leftStick, setLeftStick] = useState(undefined);
-  const [rightStick, setRightStick] = useState(undefined);
+  const [leftStick, setLeftStick] = useState<STICK_ID | DRUM_ID | undefined>(undefined);
+  const [rightStick, setRightStick] = useState<STICK_ID | DRUM_ID | undefined>(undefined);
 
   const { camera } = useThree();
 
@@ -160,7 +160,7 @@ function Collisions(props) {
 
     const newRightState = getStickCollision(STICK_ID.RIGHT);
     const rightStickId = newRightState ? newRightState.collideWith : undefined;
-    if (rightStickId != rightStick) {
+    if (rightStickId !== rightStick) {
       // new collision!
       if (newRightState) {
         // play a sound
