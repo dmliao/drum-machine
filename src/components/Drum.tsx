@@ -55,35 +55,35 @@ export const Drum = (props) => {
   const hiTomWorldPosition = new Vector3()
   const hiTomWorldQuaternion = new Quaternion()
   const [hiTomMesh, hiTomOBB]: [Mesh, YUKA.OBB] = useMemo(() => {
-    return getMeshAndObb(model.nodes.hi_tom_body, DRUM_ID.HI_TOM)
+    return getMeshAndObb(model.nodes.hi_tom_body, DRUM_ID.HI_TOM) as [Mesh, YUKA.OBB]
   }, [model])
 
   // MID TOM - mid_tom_body
   const lowTomWorldPosition = new Vector3()
   const lowTomWorldQuaternion = new Quaternion()
   const [loTomMesh, loTomOBB]: [Mesh, YUKA.OBB] = useMemo(() => {
-    return getMeshAndObb(model.nodes.mid_tom_body, DRUM_ID.LOW_TOM)
+    return getMeshAndObb(model.nodes.mid_tom_body, DRUM_ID.LOW_TOM) as [Mesh, YUKA.OBB]
   }, [model])
 
   // FLOOR TOM - floor_tom_body
   const floorTomWorldPosition = new Vector3()
   const floorTomWorldQuaternion = new Quaternion()
   const [floorTomMesh, floorTomOBB]: [Mesh, YUKA.OBB] = useMemo(() => {
-    return getMeshAndObb(model.nodes.floor_tom_body, DRUM_ID.FLOOR_TOM)
+    return getMeshAndObb(model.nodes.floor_tom_body, DRUM_ID.FLOOR_TOM) as [Mesh, YUKA.OBB]
   }, [model])
 
   // RIDE CYMBAL - ride_cymbal_body
   const rideWorldPosition = new Vector3()
   const rideWorldQuaternion = new Quaternion()
   const [rideMesh, rideObb]: [Mesh, YUKA.OBB] = useMemo(() => {
-    return getMeshAndObb(model.nodes.ride_cymbal_bod, DRUM_ID.RIDE)
+    return getMeshAndObb(model.nodes.ride_cymbal_bod, DRUM_ID.RIDE) as [Mesh, YUKA.OBB]
   }, [model])
   
   // CRASH CYMBAL - crash_cymbal_body
   const crashWorldPosition = new Vector3()
   const crashWorldQuaternion = new Quaternion()
   const [crashMesh, crashObb]: [Mesh, YUKA.OBB] = useMemo(() => {
-    return getMeshAndObb(model.nodes.crash_cymbal_body, DRUM_ID.CRASH)
+    return getMeshAndObb(model.nodes.crash_cymbal_body, DRUM_ID.CRASH) as [Mesh, YUKA.OBB]
   }, [model])
 
   useFrame(() => {
