@@ -14,7 +14,7 @@ function Scene(props: MeshProps) {
         const sceneCamera = new PerspectiveCamera()
         sceneCamera.position.set(0, 1.12, 0)
         setDefaultCamera(sceneCamera)
-    }, [])
+    }, [setDefaultCamera])
     
     const rightController = useController('right')
     const leftController = useController('left')
